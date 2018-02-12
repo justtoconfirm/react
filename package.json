@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/justtoconfirm/react/issues"
   },
-  "homepage": "https://github.com/justtoconfirm/react#readme"
+  "homepage": "https://github.com/justtoconfirm/react#readme",
+  "devDependencies": {
+    "webpack": "^3.11.0"
+  }
 }
