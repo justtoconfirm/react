@@ -18291,18 +18291,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function Welcome(props) {
     return _react2.default.createElement(
-        'div',
+        "div",
         null,
         _react2.default.createElement(
-            'h1',
+            "h1",
             null,
-            'Hello, ',
+            "Hello, ",
             props.name
         ),
         _react2.default.createElement(
-            'h2',
-            null,
-            'Welcome to React!'
+            "h2",
+            { className: "message" },
+            "Welcome to React!"
         )
     );
 }
