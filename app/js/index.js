@@ -1,6 +1,9 @@
-console.log('test');
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-var hello = () =>
-	alert('hello world');
+import Welcome from './Welcome'
 
-hello();
+ReactDOM.render (
+    <Welcome name='Dan' />,
+    document.getElementById('root')
+)
