@@ -1,9 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Welcome from './Welcome'
+//import Welcome from './Welcome'
+import FormGroup from './FormGroup'
 
 ReactDOM.render (
-    <Welcome name='Dan' />,
+    //<Welcome name='Dan' />,
+    <FormGroup />,
     document.getElementById('root')
 )
