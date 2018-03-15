@@ -7,3 +7,13 @@ $color: #0f45f0;
 .test {
 	color: $color;
 }
+
+// Autoprefixing test - should apply prefixes
+::placeholder {
+	color: gray;
+}
+
+a {
+    -webkit-border-radius: 5px;
+	border-radius: 5px;
+}
