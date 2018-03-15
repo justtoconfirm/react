@@ -26,8 +26,10 @@ module.exports = {
                             options: {
                                 minimize: true
                             } 
-                        }, 
-                        'sass-loader'
+                        },
+                        {
+                            loader: 'sass-loader'
+                        } 
                     ]
                 })
             }
