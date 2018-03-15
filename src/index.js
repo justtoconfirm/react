@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 //import Welcome from './Welcome'
-import FormGroup from './FormGroup'
+import FormGroup from './components/FormGroup'
 
 ReactDOM.render (
     //<Welcome name='Dan' />,
