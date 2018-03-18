@@ -938,7 +938,7 @@ module.exports = focusNode;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(15);
-module.exports = __webpack_require__(29);
+module.exports = __webpack_require__(30);
 
 
 /***/ }),
@@ -956,17 +956,15 @@ var _reactDom = __webpack_require__(19);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _FormGroup = __webpack_require__(28);
+var _FormField = __webpack_require__(28);
 
-var _FormGroup2 = _interopRequireDefault(_FormGroup);
+var _FormField2 = _interopRequireDefault(_FormField);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(
 //<Welcome name='Dan' />,
-_react2.default.createElement(_FormGroup2.default, null), document.getElementById('root'));
-
-//import Welcome from './Welcome'
+_react2.default.createElement(_FormField2.default, null), document.getElementById('root'));
 
 /***/ }),
 /* 16 */
@@ -18287,7 +18285,32 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Input = __webpack_require__(29);
+
+var _Input2 = _interopRequireDefault(_Input);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function FormField(props) {
+	return _react2.default.createElement(_Input2.default, null);
+}
+
+exports.default = FormField;
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 
 var _react = __webpack_require__(2);
 
@@ -18295,75 +18318,14 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function Input(props) {
+	return _react2.default.createElement("input", { type: "text" });
+}
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var FormGroup = function (_Component) {
-	_inherits(FormGroup, _Component);
-
-	function FormGroup(props) {
-		_classCallCheck(this, FormGroup);
-
-		var _this = _possibleConstructorReturn(this, (FormGroup.__proto__ || Object.getPrototypeOf(FormGroup)).call(this, props));
-
-		_this.state = {
-			field: ''
-		};
-
-		_this.handleChange = _this.handleChange.bind(_this);
-		_this.handleSubmit = _this.handleSubmit.bind(_this);
-		return _this;
-	}
-
-	_createClass(FormGroup, [{
-		key: 'handleChange',
-		value: function handleChange(event) {
-			var name = event.target.name;
-			var value = event.target.value;
-
-			this.setState(_defineProperty({}, name, value));
-		}
-	}, {
-		key: 'handleSubmit',
-		value: function handleSubmit(event) {
-			var field = this.state.field;
-
-
-			alert('You have entered: ' + field);
-			event.preventDefault();
-		}
-	}, {
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement(
-				'form',
-				{ onSubmit: this.handleSubmit },
-				_react2.default.createElement('input', {
-					type: 'text',
-					name: 'field',
-					onChange: this.handleChange,
-					value: this.state.field }),
-				_react2.default.createElement(
-					'button',
-					{ type: 'submit' },
-					'Submit'
-				)
-			);
-		}
-	}]);
-
-	return FormGroup;
-}(_react.Component);
-
-exports.default = FormGroup;
+exports.default = Input;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

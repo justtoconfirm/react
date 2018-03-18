@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-//import Welcome from './Welcome'
-import FormGroup from './components/FormGroup'
+import FormField from './components/2-molecules/form-field/FormField'
 
 ReactDOM.render (
     //<Welcome name='Dan' />,
-    <FormGroup />,
+    <FormField />,
     document.getElementById('root')
 )
