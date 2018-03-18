@@ -18296,7 +18296,13 @@ var _Input2 = _interopRequireDefault(_Input);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function FormField(props) {
-	return _react2.default.createElement(_Input2.default, null);
+
+	return _react2.default.createElement(
+		'div',
+		{ className: 'field__container' },
+		_react2.default.createElement(_Input2.default, null),
+		_react2.default.createElement(_Input2.default, { type: 'email', placeholder: 'Email' })
+	);
 }
 
 exports.default = FormField;
@@ -18318,8 +18324,13 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Input(props) {
-	return _react2.default.createElement("input", { type: "text" });
+function Input(_ref) {
+	var _ref$type = _ref.type,
+	    type = _ref$type === undefined ? 'text' : _ref$type,
+	    _ref$placeholder = _ref.placeholder,
+	    placeholder = _ref$placeholder === undefined ? '' : _ref$placeholder;
+
+	return _react2.default.createElement('input', { type: type, placeholder: placeholder });
 }
 
 exports.default = Input;
