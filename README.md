@@ -36,4 +36,4 @@ $ npm run watch
 ```
 
 ## Licence
-ISC [https://opensource.org/licenses/ISC](https://opensource.org/licenses/ISC)
+ISC
