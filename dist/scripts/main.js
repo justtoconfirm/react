@@ -962,9 +962,7 @@ var _FormField2 = _interopRequireDefault(_FormField);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(
-//<Welcome name='Dan' />,
-_react2.default.createElement(_FormField2.default, null), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_FormField2.default, null), document.getElementById('root'));
 
 /***/ }),
 /* 16 */
@@ -18295,13 +18293,21 @@ var _Input2 = _interopRequireDefault(_Input);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function FormField(props) {
+function FormField(_ref) {
+	var name = _ref.name,
+	    _ref$type = _ref.type,
+	    type = _ref$type === undefined ? 'text' : _ref$type,
+	    placeholder = _ref.placeholder;
+
+
+	var renderInput = function renderInput() {
+		return _react2.default.createElement(_Input2.default, { name: name, type: type, placeholder: placeholder });
+	};
 
 	return _react2.default.createElement(
 		'div',
 		{ className: 'field__container' },
-		_react2.default.createElement(_Input2.default, null),
-		_react2.default.createElement(_Input2.default, { type: 'email', placeholder: 'Email' })
+		renderInput()
 	);
 }
 
@@ -18325,12 +18331,13 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Input(_ref) {
-	var _ref$type = _ref.type,
+	var name = _ref.name,
+	    _ref$type = _ref.type,
 	    type = _ref$type === undefined ? 'text' : _ref$type,
 	    _ref$placeholder = _ref.placeholder,
 	    placeholder = _ref$placeholder === undefined ? '' : _ref$placeholder;
 
-	return _react2.default.createElement('input', { type: type, placeholder: placeholder });
+	return _react2.default.createElement('input', { type: type, placeholder: placeholder, className: 'input' });
 }
 
 exports.default = Input;

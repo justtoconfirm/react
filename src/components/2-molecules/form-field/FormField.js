@@ -2,12 +2,15 @@ import React from 'react'
 
 import Input from '../../1-atoms/input/Input'
 
-function FormField (props) {
+function FormField ({ name, type = 'text', placeholder }) {
+
+	const renderInput = () =>
+		<Input name={name} type={type} placeholder={placeholder} />
 
 	return (
 		<div className='field__container'>
-			<Input />
-			<Input type="email" placeholder="Email" />
+			{renderInput()}
+			{/* <Input type="email" placeholder="Email" /> */}
 		</div>
 	)
 }
