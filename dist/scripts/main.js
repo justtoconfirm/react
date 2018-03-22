@@ -962,7 +962,7 @@ var _FormField2 = _interopRequireDefault(_FormField);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_FormField2.default, null), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_FormField2.default, { labelFor: 'firstname', labelValue: 'First name', name: 'firstname' }), document.getElementById('root'));
 
 /***/ }),
 /* 16 */
