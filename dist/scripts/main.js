@@ -938,7 +938,7 @@ module.exports = focusNode;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(15);
-module.exports = __webpack_require__(31);
+module.exports = __webpack_require__(32);
 
 
 /***/ }),
@@ -956,12 +956,17 @@ var _reactDom = __webpack_require__(19);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _FormField = __webpack_require__(28);
+var _reactLogo = __webpack_require__(28);
+
+var _reactLogo2 = _interopRequireDefault(_reactLogo);
+
+var _FormField = __webpack_require__(29);
 
 var _FormField2 = _interopRequireDefault(_FormField);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Image processed from src/ directory and added to dist/ directory
 _reactDom2.default.render(_react2.default.createElement(_FormField2.default, { labelFor: 'firstname', labelValue: 'First name', name: 'firstname' }), document.getElementById('root'));
 
 /***/ }),
@@ -18276,6 +18281,12 @@ module.exports = camelize;
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "638be90904f9f9248d3c69cb2992c562.png";
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
@@ -18287,11 +18298,11 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Label = __webpack_require__(29);
+var _Label = __webpack_require__(30);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Input = __webpack_require__(30);
+var _Input = __webpack_require__(31);
 
 var _Input2 = _interopRequireDefault(_Input);
 
@@ -18325,7 +18336,7 @@ function FormField(_ref) {
 exports.default = FormField;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18355,7 +18366,7 @@ function Label(_ref) {
 exports.default = Label;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18384,7 +18395,7 @@ function Input(_ref) {
 exports.default = Input;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

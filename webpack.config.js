@@ -7,6 +7,10 @@ module.exports = {
         './src/index.js', 
         './src/scss/main.scss'
     ],
+    output: {
+        filename: 'scripts/main.js',
+        path: path.resolve(__dirname, 'dist')
+    },
     module: {
         rules: [
             {
@@ -41,14 +45,16 @@ module.exports = {
                         } 
                     ]
                 })
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    'file-loader'
+                ]
             }
         ]
     },
     plugins: [
         new ExtractTextPlugin({filename: 'styles/style.css'})
-    ],
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'scripts/main.js'
-    }
+    ]
 };
