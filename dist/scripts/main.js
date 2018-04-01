@@ -18281,7 +18281,7 @@ module.exports = camelize;
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "638be90904f9f9248d3c69cb2992c562.png";
+module.exports = __webpack_require__.p + "img/react-logo.png";
 
 /***/ }),
 /* 29 */
