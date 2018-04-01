@@ -6,10 +6,12 @@ import Input from '../../1-atoms/input/Input'
 function FormField ({ labelFor, labelValue, name, type = 'text', placeholder }) {
 
 	const renderLabel = () =>
-		<Label labelFor={labelFor} labelValue={labelValue} />
+		//<Label labelFor={labelFor} labelValue={labelValue} />
+		<Label {...{ labelFor, labelValue }} />
 
 	const renderInput = () =>
-		<Input name={name} type={type} placeholder={placeholder} />
+		//<Input name={name} type={type} placeholder={placeholder} />
+		<Input {...{ name, type, placeholder }} />
 
 	return (
 		<div className='field__container'>
