@@ -10,7 +10,8 @@
   "scripts": {
     "build": "webpack",
     "production": "webpack -p",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "test": "mocha || true"
   },
   "repository": {
     "type": "git",
