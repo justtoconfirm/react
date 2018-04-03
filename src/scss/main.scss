@@ -17,3 +17,8 @@ a {
     -webkit-border-radius: 5px;
 	border-radius: 5px;
 }
+
+// Label positioned above input
+input, label {
+	display: block;
+}
