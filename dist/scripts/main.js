@@ -18307,11 +18307,17 @@ function FormField(_ref) {
 
 
 	var renderLabel = function renderLabel() {
-		return _react2.default.createElement(_Label2.default, { labelFor: labelFor, labelValue: labelValue });
+		return (
+			//<Label labelFor={labelFor} labelValue={labelValue} />
+			_react2.default.createElement(_Label2.default, { labelFor: labelFor, labelValue: labelValue })
+		);
 	};
 
 	var renderInput = function renderInput() {
-		return _react2.default.createElement(_Input2.default, { name: name, type: type, placeholder: placeholder });
+		return (
+			//<Input name={name} type={type} placeholder={placeholder} />
+			_react2.default.createElement(_Input2.default, { name: name, type: type, placeholder: placeholder })
+		);
 	};
 
 	return _react2.default.createElement(
@@ -18365,6 +18371,8 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -18378,7 +18386,10 @@ function Input(_ref) {
 	    _ref$placeholder = _ref.placeholder,
 	    placeholder = _ref$placeholder === undefined ? '' : _ref$placeholder;
 
-	return _react2.default.createElement('input', { type: type, placeholder: placeholder, className: 'input' });
+	return (
+		//<input type={type} placeholder={placeholder} className='input' />
+		_react2.default.createElement('input', _extends({ type: type, placeholder: placeholder }, { className: 'input' }))
+	);
 }
 
 exports.default = Input;
