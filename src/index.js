@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
-import FormField from './components/2-molecules/form-field/FormField'
+import App from './components/App'
 
 ReactDOM.render (
-    <FormField labelFor='firstname' labelValue='First name' name='firstname' />,
+    <App />,
     document.getElementById('root')
 )

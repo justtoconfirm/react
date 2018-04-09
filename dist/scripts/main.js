@@ -938,7 +938,7 @@ module.exports = focusNode;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(15);
-module.exports = __webpack_require__(31);
+module.exports = __webpack_require__(32);
 
 
 /***/ }),
@@ -956,13 +956,13 @@ var _reactDom = __webpack_require__(19);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _FormField = __webpack_require__(28);
+var _App = __webpack_require__(28);
 
-var _FormField2 = _interopRequireDefault(_FormField);
+var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_FormField2.default, { labelFor: 'firstname', labelValue: 'First name', name: 'firstname' }), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
 
 /***/ }),
 /* 16 */
@@ -18287,11 +18287,44 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Label = __webpack_require__(29);
+var _FormField = __webpack_require__(29);
+
+var _FormField2 = _interopRequireDefault(_FormField);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function App() {
+	return _react2.default.createElement(
+		'div',
+		null,
+		_react2.default.createElement(_FormField2.default, { labelFor: 'firstname', labelValue: 'First name', name: 'firstname' }),
+		_react2.default.createElement(_FormField2.default, { labelFor: 'lastname', labelValue: 'Last name', name: 'lastname' }),
+		_react2.default.createElement(_FormField2.default, { labelFor: 'email', labelValue: 'Email', type: 'email', name: 'email' })
+	);
+}
+
+exports.default = App;
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Label = __webpack_require__(30);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Input = __webpack_require__(30);
+var _Input = __webpack_require__(31);
 
 var _Input2 = _interopRequireDefault(_Input);
 
@@ -18307,17 +18340,11 @@ function FormField(_ref) {
 
 
 	var renderLabel = function renderLabel() {
-		return (
-			//<Label labelFor={labelFor} labelValue={labelValue} />
-			_react2.default.createElement(_Label2.default, { labelFor: labelFor, labelValue: labelValue })
-		);
+		return _react2.default.createElement(_Label2.default, { labelFor: labelFor, labelValue: labelValue });
 	};
 
 	var renderInput = function renderInput() {
-		return (
-			//<Input name={name} type={type} placeholder={placeholder} />
-			_react2.default.createElement(_Input2.default, { name: name, type: type, placeholder: placeholder })
-		);
+		return _react2.default.createElement(_Input2.default, { name: name, type: type, placeholder: placeholder });
 	};
 
 	return _react2.default.createElement(
@@ -18331,7 +18358,7 @@ function FormField(_ref) {
 exports.default = FormField;
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18361,7 +18388,7 @@ function Label(_ref) {
 exports.default = Label;
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18386,16 +18413,13 @@ function Input(_ref) {
 	    _ref$placeholder = _ref.placeholder,
 	    placeholder = _ref$placeholder === undefined ? '' : _ref$placeholder;
 
-	return (
-		//<input type={type} placeholder={placeholder} className='input' />
-		_react2.default.createElement('input', _extends({ type: type, placeholder: placeholder }, { className: 'input' }))
-	);
+	return _react2.default.createElement('input', _extends({ type: type, placeholder: placeholder }, { className: 'input' }));
 }
 
 exports.default = Input;
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
