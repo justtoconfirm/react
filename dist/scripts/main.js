@@ -18410,8 +18410,7 @@ function Input(_ref) {
 	var name = _ref.name,
 	    _ref$type = _ref.type,
 	    type = _ref$type === undefined ? 'text' : _ref$type,
-	    _ref$placeholder = _ref.placeholder,
-	    placeholder = _ref$placeholder === undefined ? '' : _ref$placeholder;
+	    placeholder = _ref.placeholder;
 
 	return _react2.default.createElement('input', _extends({ name: name, type: type, placeholder: placeholder }, { className: 'input' }));
 }
