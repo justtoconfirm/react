@@ -6,7 +6,7 @@ function App () {
 		<div>
 			<FormField labelFor='firstname' labelValue='First name' name='firstname' />
 			<FormField labelFor='lastname' labelValue='Last name' name='lastname' />
-			<FormField labelFor='email' labelValue='Email' type='email' name='email' />
+			<FormField labelFor='email' labelValue='Email' type='email' placeholder="Email" name='email' />
 		</div>
 	)
 }

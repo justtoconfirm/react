@@ -18299,7 +18299,7 @@ function App() {
 		null,
 		_react2.default.createElement(_FormField2.default, { labelFor: 'firstname', labelValue: 'First name', name: 'firstname' }),
 		_react2.default.createElement(_FormField2.default, { labelFor: 'lastname', labelValue: 'Last name', name: 'lastname' }),
-		_react2.default.createElement(_FormField2.default, { labelFor: 'email', labelValue: 'Email', type: 'email', name: 'email' })
+		_react2.default.createElement(_FormField2.default, { labelFor: 'email', labelValue: 'Email', type: 'email', placeholder: 'Email', name: 'email' })
 	);
 }
 
@@ -18413,7 +18413,7 @@ function Input(_ref) {
 	    _ref$placeholder = _ref.placeholder,
 	    placeholder = _ref$placeholder === undefined ? '' : _ref$placeholder;
 
-	return _react2.default.createElement('input', _extends({ type: type, placeholder: placeholder }, { className: 'input' }));
+	return _react2.default.createElement('input', _extends({ name: name, type: type, placeholder: placeholder }, { className: 'input' }));
 }
 
 exports.default = Input;
