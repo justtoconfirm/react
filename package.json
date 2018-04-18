@@ -11,7 +11,7 @@
     "build": "webpack",
     "production": "webpack -p",
     "watch": "webpack --watch",
-    "test": "mocha || true"
+    "test": "mocha --recursive"
   },
   "repository": {
     "type": "git",
