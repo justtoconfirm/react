@@ -31,6 +31,7 @@ $ npm run build
 
 # For production build
 $ npm run production
+
 # Watch function
 $ npm run watch
 ```
