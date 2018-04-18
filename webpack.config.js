@@ -3,9 +3,10 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    entry: [
-        './src/index.js', 
-        './src/scss/main.scss'
+    context: path.resolve(__dirname, 'src'),
+    entry: [  
+        './index.js', 
+        './scss/main.scss'
     ],
     output: {
         filename: 'scripts/main.js',
