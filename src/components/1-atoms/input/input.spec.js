@@ -1,7 +1,8 @@
-const assert = require('chai').assert;
+import React from 'react'
+import { assert } from 'chai'
 
 describe('Input', function() {
-		it('test test test', function() {
-			assert.equal(true);
-		});
-});
+	it('test input', function() {
+		assert.equal(true)
+	})
+})
