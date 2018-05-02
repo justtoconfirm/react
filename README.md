@@ -41,6 +41,9 @@ $ npm run watch
 ## Run Tests
 ```
 $ npm run test
+
+# Watch function
+$ npm run test:watch
 ```
 
 ## Licence
