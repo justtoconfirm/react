@@ -1,8 +1,12 @@
 import React from 'react'
-import { assert } from 'chai'
+import { shallow } from 'enzyme'
+import { assert, expect } from 'chai'
+import Component from './FormField'
 
-describe('FormField', function() {
-	it('test formfield', function() {
-		assert.equal(true)
+describe('<FormField/>', () => {
+	const wrapper = shallow(<Component/>)
+
+	it(`should have two children`, () => {
+		expect(wrapper.children().length).to.eql(2)
 	})
 })
