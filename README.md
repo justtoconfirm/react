@@ -6,6 +6,7 @@ A simple React starter boilerplate project to setup React using Webpack and Babe
 * Babel
 * Mocha - JavaScript test framework
 * Chai - Assertion library
+* Enzyme
 
 The project uses a number of NPM (Node Package Manager) packages to apply further functionality.
 
