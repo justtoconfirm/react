@@ -21,9 +21,7 @@ const Button = ({ type = 'button', url = '', className = '', theme = '', isFullW
 		<a href={url} className={buttonClass}>{children}</a>
 
 	return (
-		isAnchorElement
-			? renderAnchor()
-			: renderButton()
+		isAnchorElement ? renderAnchor() : renderButton()
 	)
 }
 
