@@ -12,7 +12,7 @@ const Button = ({ type = 'button', url = '', className = '', theme = '', isFullW
 		'btn--full-width': isFullWidth
 	})
 
-	const isAnchorElement = url && (url.includes('http') || url.startsWith('#'))
+	const isAnchorElement = url && (url.includes('http') || url.startsWith('#') || url.startsWith('mailto') || url.startsWith('/'))
 
 	const renderButton = () =>
 		<button type={type} className={buttonClass}>{children}</button>

@@ -20454,7 +20454,7 @@ var Button = function Button(_ref) {
 		'btn--full-width': isFullWidth
 	});
 
-	var isAnchorElement = url && (url.includes('http') || url.startsWith('#'));
+	var isAnchorElement = url && (url.includes('http') || url.startsWith('#') || url.startsWith('mailto') || url.startsWith('/'));
 
 	var renderButton = function renderButton() {
 		return _react2.default.createElement(
