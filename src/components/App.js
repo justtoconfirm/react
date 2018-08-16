@@ -5,12 +5,12 @@ import FormField from './2-molecules/form-field/FormField'
 
 function App () {
 	return (
-		<div>
+		<React.Fragment>
 			<FormField labelFor='firstname' labelValue='First name' name='firstname' />
 			<FormField labelFor='lastname' labelValue='Last name' name='lastname' />
 			<FormField labelFor='email' labelValue='Email' type='email' placeholder='Email' name='email' />
 			<Button type='submit' theme='primary'>Submit</Button> 
-		</div>
+		</React.Fragment>
 	)
 }
 

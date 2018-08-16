@@ -20398,7 +20398,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function App() {
 	return _react2.default.createElement(
-		'div',
+		_react2.default.Fragment,
 		null,
 		_react2.default.createElement(_FormField2.default, { labelFor: 'firstname', labelValue: 'First name', name: 'firstname' }),
 		_react2.default.createElement(_FormField2.default, { labelFor: 'lastname', labelValue: 'Last name', name: 'lastname' }),
