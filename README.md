@@ -45,6 +45,9 @@ $ npm run test
 
 # Watch function
 $ npm run test:watch
+
+# Flow
+$ npm run flow
 ```
 
 ## Licence
