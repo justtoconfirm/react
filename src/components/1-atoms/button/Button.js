@@ -14,11 +14,17 @@ const Button = ({ type = 'button', url = '', className = '', theme = '', isFullW
 
 	const isAnchorElement = url && (url.includes('http') || url.startsWith('#') || url.startsWith('mailto') || url.startsWith('/'))
 
+	// Function: button click
+	function handleClick(e) {
+		e.preventDefault()
+		console.log('Button was clicked')
+	}
+
 	const renderButton = () =>
-		<button type={type} className={buttonClass}>{children}</button>
+		<button type={type} className={buttonClass} onClick={handleClick}>{children}</button>
 
 	const renderAnchor = () =>
-		<a href={url} className={buttonClass}>{children}</a>
+		<a href={url} className={buttonClass} onClick={handleClick}>{children}</a>
 
 	return (
 		isAnchorElement ? renderAnchor() : renderButton()
