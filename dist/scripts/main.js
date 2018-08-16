@@ -20407,11 +20407,6 @@ function App() {
 			_Button2.default,
 			{ type: 'submit', theme: 'primary' },
 			'Submit'
-		),
-		_react2.default.createElement(
-			_Button2.default,
-			{ theme: 'primary' },
-			'Test'
 		)
 	);
 }
