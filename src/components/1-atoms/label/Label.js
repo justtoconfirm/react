@@ -1,6 +1,9 @@
-import React from 'react'
+// @flow
 
-function Label ({ labelFor, labelValue }) {
+import React from 'react'
+import type { LabelType } from './Label.types'
+
+function Label ({ labelFor, labelValue }: LabelType) {
 	return (
 		<label htmlFor={labelFor} className='label'>
 			{labelValue}
