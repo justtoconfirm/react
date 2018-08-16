@@ -4,8 +4,12 @@
   "description": "React boilerplate",
   "main": "index.js",
   "browserslist": [
-    "> 1%",
-    "ie > 9"
+    "iOS > 10",
+    "IE 11",
+    "Edge > 14",
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari version"
   ],
   "scripts": {
     "build": "webpack",
