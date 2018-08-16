@@ -55,6 +55,7 @@
   "babel": {
     "presets": [
       "env",
+      "flow",
       "react"
     ]
   }
