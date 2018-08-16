@@ -13,9 +13,16 @@ The project uses a number of NPM (Node Package Manager) packages to apply furthe
 * SCSS files compiles using sass-loader
 * Autoprefixer applies/removes browser prefixing to CSS
 
-Browser support configuration can be found within the package.json file.
+## Browser Support
 
-* IE9 +
+Browser support configuration can be found within the package.json file. The following browsers are supported:
+
+* Chrome - last 2 versions
+* Firefox - last 2 versions
+* Safari - last 2 versions
+* iOS 10 and above
+* Internet Explorer 11 (IE11)
+* Edge > version 14
 
 ## Clone Repository
 ```
