@@ -14,7 +14,7 @@ const FormField = ({ labelFor, labelValue, name, type = 'text', placeholder }: F
 		<Input {...{ name, type, placeholder }} />
 
 	return (
-		<div className='field__container'>
+		<div className='field-container'>
 			{renderLabel()}
 			{renderInput()}
 		</div>
