@@ -1,24 +1,19 @@
-$color: #0f45f0;
+// Variables
+@import 'variables/color';
+@import 'variables/button';
 
-.message {
-	color: $color;
-}
+// Utilities
+@import 'util/reset';
 
-.test {
-	color: $color;
-}
+// Maps
+@import 'maps/themes';
 
-// Autoprefixing test - should apply prefixes
-::placeholder {
-	color: gray;
-}
+// Mixins
+@import 'mixins/theme';
 
-a {
-    -webkit-border-radius: 5px;
-	border-radius: 5px;
-}
+// Atoms
+@import 'atomic/atoms/buttons/button';
+@import 'atomic/atoms/input/input';
 
-// Label positioned above input
-input, label {
-	display: block;
-}
+// Shame
+@import 'shame/shame';

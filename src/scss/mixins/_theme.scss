@@ -1,0 +1,20 @@
+//  Initialise our variables as 'null' when used outside of the mixin
+$btn-color: null;
+
+@mixin theme($themes: $themes) {
+    // Iterate through the themes map
+    @each $theme, $styles in $themes {
+        // Create a selector class (e.g. '.btn--primary'
+        &--#{$theme} {
+			
+            // Set the theme variables
+            $btn-color: map-get($styles, 'btn-color') !global;
+
+            // Output user content
+            @content;
+
+            // Unset the theme variables
+            $btn-color: null !global;
+        }
+    }
+}
