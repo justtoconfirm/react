@@ -20580,7 +20580,7 @@ var FormField = function FormField(_ref) {
 
 	return _react2.default.createElement(
 		'div',
-		{ className: 'field__container' },
+		{ className: 'field-container' },
 		renderLabel(),
 		renderInput()
 	);

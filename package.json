@@ -15,8 +15,8 @@
     "node": ">= 6.11.3"
   },
   "scripts": {
-    "build": "webpack",
-    "production": "webpack -p",
+    "dev": "webpack",
+    "build": "webpack -p",
     "watch": "webpack --watch",
     "test": "mocha --recursive && npm run flow",
     "test:watch": "npm run test -- --watch",
