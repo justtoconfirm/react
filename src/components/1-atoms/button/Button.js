@@ -4,7 +4,7 @@ import React from 'react'
 import classNames from 'classnames'
 import type { ButtonType } from './Button.types'
 
-function Button({ type = 'button', url = '', className = '', theme = '', isFullWidth = false, children }: ButtonType) {
+const Button = ({ type = 'button', url = '', className = '', theme = '', isFullWidth = false, children }: ButtonType) => {
 
 	const buttonClass = classNames('btn', className, {
 		'btn--primary': theme === 'primary',

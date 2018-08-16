@@ -2,7 +2,7 @@ import React from 'react'
 import Button from './1-atoms/button/Button'
 import FormField from './2-molecules/form-field/FormField'
 
-function App () {
+const App = () => {
 	return (
 		<React.Fragment>
 			<FormField labelFor='firstname' labelValue='First name' name='firstname' />

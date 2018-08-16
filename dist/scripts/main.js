@@ -20396,7 +20396,7 @@ var _FormField2 = _interopRequireDefault(_FormField);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function App() {
+var App = function App() {
 	return _react2.default.createElement(
 		_react2.default.Fragment,
 		null,
@@ -20409,7 +20409,7 @@ function App() {
 			'Submit'
 		)
 	);
-}
+};
 
 exports.default = App;
 
@@ -20434,7 +20434,7 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Button(_ref) {
+var Button = function Button(_ref) {
 	var _ref$type = _ref.type,
 	    type = _ref$type === undefined ? 'button' : _ref$type,
 	    _ref$url = _ref.url,
@@ -20473,7 +20473,7 @@ function Button(_ref) {
 	};
 
 	return isAnchorElement ? renderAnchor() : renderButton();
-}
+};
 
 exports.default = Button;
 
@@ -20561,7 +20561,7 @@ var _Input2 = _interopRequireDefault(_Input);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function FormField(_ref) {
+var FormField = function FormField(_ref) {
 	var labelFor = _ref.labelFor,
 	    labelValue = _ref.labelValue,
 	    name = _ref.name,
@@ -20584,7 +20584,7 @@ function FormField(_ref) {
 		renderLabel(),
 		renderInput()
 	);
-}
+};
 
 exports.default = FormField;
 
@@ -20605,7 +20605,7 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Label(_ref) {
+var Label = function Label(_ref) {
 	var labelFor = _ref.labelFor,
 	    labelValue = _ref.labelValue;
 
@@ -20614,7 +20614,7 @@ function Label(_ref) {
 		{ htmlFor: labelFor, className: 'label' },
 		labelValue
 	);
-}
+};
 
 exports.default = Label;
 
@@ -20637,14 +20637,14 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Input(_ref) {
+var Input = function Input(_ref) {
 	var name = _ref.name,
 	    _ref$type = _ref.type,
 	    type = _ref$type === undefined ? 'text' : _ref$type,
 	    placeholder = _ref.placeholder;
 
 	return _react2.default.createElement('input', _extends({ name: name, type: type, placeholder: placeholder }, { className: 'input' }));
-}
+};
 
 exports.default = Input;
 
