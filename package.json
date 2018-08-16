@@ -11,6 +11,9 @@
     "last 2 Firefox versions",
     "last 2 Safari version"
   ],
+  "engines": {
+    "node": ">= 6.11.3"
+  },
   "scripts": {
     "build": "webpack",
     "production": "webpack -p",
