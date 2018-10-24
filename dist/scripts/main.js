@@ -2076,9 +2076,9 @@ var _reactDom = __webpack_require__(26);
 
 var _reactRedux = __webpack_require__(35);
 
-var _store = __webpack_require__(61);
+var _index = __webpack_require__(61);
 
-var _store2 = _interopRequireDefault(_store);
+var _index2 = _interopRequireDefault(_index);
 
 var _App = __webpack_require__(63);
 
@@ -2088,7 +2088,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _reactDom.render)(_react2.default.createElement(
 	_reactRedux.Provider,
-	{ store: _store2.default },
+	{ store: _index2.default },
 	_react2.default.createElement(_App2.default, null)
 ), document.getElementById('root'));
 
