@@ -2,6 +2,7 @@
 A simple React starter boilerplate project to setup React using Webpack and Babel. You will need to have NPM (Node Package Manager) installed. Setup includes:
 
 * React v16.2.0
+* Redux
 * Webpack 3
 * Babel
 * Mocha - JavaScript test framework
