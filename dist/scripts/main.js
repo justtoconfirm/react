@@ -2074,8 +2074,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(26);
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
 var _reactRedux = __webpack_require__(35);
 
 var _store = __webpack_require__(61);
@@ -2088,7 +2086,7 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(
+(0, _reactDom.render)(_react2.default.createElement(
 	_reactRedux.Provider,
 	{ store: _store2.default },
 	_react2.default.createElement(_App2.default, null)
