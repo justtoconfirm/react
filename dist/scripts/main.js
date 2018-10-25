@@ -2058,7 +2058,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(23);
-module.exports = __webpack_require__(69);
+module.exports = __webpack_require__(70);
 
 
 /***/ }),
@@ -2080,7 +2080,7 @@ var _index = __webpack_require__(61);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _App = __webpack_require__(63);
+var _App = __webpack_require__(64);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -23335,6 +23335,9 @@ exports.default = store;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+
+var _actionTypes = __webpack_require__(63);
+
 var initialState = {
 	articles: []
 };
@@ -23342,13 +23345,32 @@ var initialState = {
 var rootReducer = function rootReducer() {
 	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
 	var action = arguments[1];
-	return state;
+
+	switch (action.type) {
+		case _actionTypes.ADD_ARTICLE:
+			state.articles.concat(action.payload);
+			return state;
+		default:
+			return state;
+	}
 };
 
 exports.default = rootReducer;
 
 /***/ }),
 /* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var ADD_ARTICLE = exports.ADD_ARTICLE = "ADD_ARTICLE";
+
+/***/ }),
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23362,11 +23384,11 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Button = __webpack_require__(64);
+var _Button = __webpack_require__(65);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _FormField = __webpack_require__(66);
+var _FormField = __webpack_require__(67);
 
 var _FormField2 = _interopRequireDefault(_FormField);
 
@@ -23390,7 +23412,7 @@ var App = function App() {
 exports.default = App;
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23404,7 +23426,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(65);
+var _classnames = __webpack_require__(66);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -23460,7 +23482,7 @@ var Button = function Button(_ref) {
 exports.default = Button;
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -23519,7 +23541,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23533,11 +23555,11 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Label = __webpack_require__(67);
+var _Label = __webpack_require__(68);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Input = __webpack_require__(68);
+var _Input = __webpack_require__(69);
 
 var _Input2 = _interopRequireDefault(_Input);
 
@@ -23571,7 +23593,7 @@ var FormField = function FormField(_ref) {
 exports.default = FormField;
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23601,7 +23623,7 @@ var Label = function Label(_ref) {
 exports.default = Label;
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23631,7 +23653,7 @@ var Input = function Input(_ref) {
 exports.default = Input;
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
