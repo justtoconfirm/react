@@ -12,6 +12,9 @@ Can be accessed from within the browser console
 window.store = store
 window.addArticle = addArticle
 
+// Access the current state
+console.log(store.getState())
+
 render (
 	<Provider store={store}>
 		<App />

@@ -2107,6 +2107,9 @@ Can be accessed from within the browser console
 window.store = _index2.default;
 window.addArticle = _index3.addArticle;
 
+// Access the current state
+console.log(_index2.default.getState());
+
 (0, _reactDom.render)(_react2.default.createElement(
 	_reactRedux.Provider,
 	{ store: _index2.default },
