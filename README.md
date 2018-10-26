@@ -1,7 +1,7 @@
 # react-project
 A simple React starter boilerplate project to setup React using Webpack and Babel. You will need to have NPM (Node Package Manager) installed. Setup includes:
 
-* React v16.2.0
+* React v16.6.0
 * Redux
 * Webpack 3
 * Babel
@@ -35,6 +35,11 @@ $ git clone https://github.com/justtoconfirm/react-project.git
 ```
 $ cd react-project
 $ npm install
+```
+
+## Update NPM packages
+```
+$ npm update <package-name>
 ```
 
 ## Run
