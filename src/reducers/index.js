@@ -1,16 +1,8 @@
-import { ADD_ARTICLE } from '../constants/action-types'
+import { combineReducers } from 'redux'
+import oneReducer from './reducer-one'
 
-const initialState = {
-	articles: []
-}
-
-const rootReducer = (state = initialState, action) => {
-	switch (action.type) {
-		case ADD_ARTICLE:
-			return { ...state, articles: [...state.articles, action.payload] }
-		default:
-			return state
-	}
-}
+const rootReducer = combineReducers({
+	ones: oneReducer
+})
 
 export default rootReducer
