@@ -1,7 +1,6 @@
 import { ADD_TODO } from '../constants/action-types'
 
-export function addTodo() {
-	return {
-		type: ADD_TODO
-	}
-}
+export const addTodo = text => ({
+	type: ADD_TODO,
+	text
+})
