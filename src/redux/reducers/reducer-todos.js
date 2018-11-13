@@ -1,7 +1,3 @@
-const initialState = {
-	todolist: []
-}
-
-const todosReducer = (state = initialState, action) => state;
+const todosReducer = (state = [], action) => state;
 
 export default todosReducer

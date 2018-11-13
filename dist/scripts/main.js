@@ -23720,16 +23720,12 @@ exports.default = twoReducer;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });
-var initialState = {
-	todolist: []
-};
-
 var todosReducer = function todosReducer() {
-	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-	var action = arguments[1];
-	return state;
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var action = arguments[1];
+  return state;
 };
 
 exports.default = todosReducer;
