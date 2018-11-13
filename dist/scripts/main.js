@@ -2003,7 +2003,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(23);
-module.exports = __webpack_require__(73);
+module.exports = __webpack_require__(74);
 
 
 /***/ }),
@@ -2025,9 +2025,9 @@ var _index = __webpack_require__(62);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = __webpack_require__(66);
+var _index3 = __webpack_require__(67);
 
-var _App = __webpack_require__(67);
+var _App = __webpack_require__(68);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -23628,11 +23628,16 @@ var _reducerTwo = __webpack_require__(65);
 
 var _reducerTwo2 = _interopRequireDefault(_reducerTwo);
 
+var _reducerTodos = __webpack_require__(66);
+
+var _reducerTodos2 = _interopRequireDefault(_reducerTodos);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var rootReducer = (0, _redux.combineReducers)({
 	ones: _reducerOne2.default,
-	twos: _reducerTwo2.default
+	twos: _reducerTwo2.default,
+	todos: _reducerTodos2.default
 });
 
 exports.default = rootReducer;
@@ -23717,6 +23722,28 @@ exports.default = twoReducer;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+var initialState = {
+	todolist: []
+};
+
+var todosReducer = function todosReducer() {
+	var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+	var action = arguments[1];
+	return state;
+};
+
+exports.default = todosReducer;
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 exports.addArticle = undefined;
 
 var _actionTypes = __webpack_require__(8);
@@ -23729,7 +23756,7 @@ var addArticle = exports.addArticle = function addArticle(article) {
 };
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23743,11 +23770,11 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Button = __webpack_require__(68);
+var _Button = __webpack_require__(69);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _FormField = __webpack_require__(70);
+var _FormField = __webpack_require__(71);
 
 var _FormField2 = _interopRequireDefault(_FormField);
 
@@ -23771,7 +23798,7 @@ var App = function App() {
 exports.default = App;
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23785,7 +23812,7 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(69);
+var _classnames = __webpack_require__(70);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -23841,7 +23868,7 @@ var Button = function Button(_ref) {
 exports.default = Button;
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -23900,7 +23927,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23914,11 +23941,11 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Label = __webpack_require__(71);
+var _Label = __webpack_require__(72);
 
 var _Label2 = _interopRequireDefault(_Label);
 
-var _Input = __webpack_require__(72);
+var _Input = __webpack_require__(73);
 
 var _Input2 = _interopRequireDefault(_Input);
 
@@ -23952,7 +23979,7 @@ var FormField = function FormField(_ref) {
 exports.default = FormField;
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23982,7 +24009,7 @@ var Label = function Label(_ref) {
 exports.default = Label;
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24012,7 +24039,7 @@ var Input = function Input(_ref) {
 exports.default = Input;
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
