@@ -28,6 +28,8 @@ store.dispatch( addTodo({ text: 'Hello World' }))
 // Verify that the state has changed
 console.log(store.getState())
 
+
+
 render (
 	<Provider store={store}>
 		<App />
