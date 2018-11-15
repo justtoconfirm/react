@@ -23,7 +23,7 @@ store.subscribe(() => console.log('Look ma, Redux!!'))
 // Change the state in Redux by dispatching an action.
 // We need to call the dispatch method
 // This will add a new item to the state
-store.dispatch( addTodo({ text: 'Hello World' }))
+store.dispatch( addTodo({ text: 'Hello World xxx' }))
 
 // Verify that the state has changed
 console.log(store.getState())

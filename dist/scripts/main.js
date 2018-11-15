@@ -2071,7 +2071,7 @@ _index2.default.subscribe(function () {
 // Change the state in Redux by dispatching an action.
 // We need to call the dispatch method
 // This will add a new item to the state
-_index2.default.dispatch((0, _actionAddTodo.addTodo)({ text: 'Hello World' }));
+_index2.default.dispatch((0, _actionAddTodo.addTodo)({ text: 'Hello World xxx' }));
 
 // Verify that the state has changed
 console.log(_index2.default.getState());
@@ -23894,13 +23894,15 @@ var _reactRedux = __webpack_require__(14);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Adding state and actions as props
 var FormField = function FormField(_ref) {
 	var labelFor = _ref.labelFor,
 	    labelValue = _ref.labelValue,
 	    name = _ref.name,
 	    _ref$type = _ref.type,
 	    type = _ref$type === undefined ? 'text' : _ref$type,
-	    placeholder = _ref.placeholder;
+	    placeholder = _ref.placeholder,
+	    todos = _ref.todos;
 
 
 	var renderLabel = function renderLabel() {
@@ -23911,11 +23913,21 @@ var FormField = function FormField(_ref) {
 		return _react2.default.createElement(_Input2.default, { name: name, type: type, placeholder: placeholder });
 	};
 
+	//The component receives the state and actions as props
+	var renderText = function renderText() {
+		return _react2.default.createElement(
+			'p',
+			null,
+			todos.text
+		);
+	};
+
 	return _react2.default.createElement(
 		'div',
 		{ className: 'field-container' },
 		renderLabel(),
-		renderInput()
+		renderInput(),
+		renderText()
 	);
 };
 
@@ -23924,14 +23936,21 @@ var FormField = function FormField(_ref) {
 // Should always return one or more key value pairs
 // The key(s) are React props
 // The value(s) are the Redux state items we're mapping to those props
+// This function maps the state to a prop called 'state'
 
 
 // TESTING THE REDUX STORE
-var mapStateToProps = function mapStateToProps(state) {};
+var mapStateToProps = function mapStateToProps(state) {
+	return {
+		todos: state.todos[0]
+	};
+};
 
 // To use the connect function provided by react-redux
 // We should now have access to the Redux store
 // https://www.learnhowtoprogram.com/react/redux-716c6ba7-bcca-4d01-97ab-3a0a2723c0aa/mapping-redux-state-to-react-props
+// https://medium.com/the-web-tub/managing-your-react-state-with-redux-affab72de4b1
+// https://www.sohamkamani.com/blog/2017/03/31/react-redux-connect-explained/
 /* export default connect()(FormField) */
 
 // Pass the mapStateToProps to the connect() function
