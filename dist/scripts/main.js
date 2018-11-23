@@ -2021,7 +2021,7 @@ var REMOVE_TODO = exports.REMOVE_TODO = "REMOVE_TODO";
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(24);
-module.exports = __webpack_require__(72);
+module.exports = __webpack_require__(73);
 
 
 /***/ }),
@@ -23719,6 +23719,10 @@ var _FormField = __webpack_require__(69);
 
 var _FormField2 = _interopRequireDefault(_FormField);
 
+var _TestComponent = __webpack_require__(72);
+
+var _TestComponent2 = _interopRequireDefault(_TestComponent);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
@@ -23732,10 +23736,12 @@ var App = function App() {
 			_Button2.default,
 			{ type: 'submit', theme: 'primary' },
 			'Submit'
-		)
+		),
+		_react2.default.createElement(_TestComponent2.default, null)
 	);
 };
 
+// TESTING
 exports.default = App;
 
 /***/ }),
@@ -23894,7 +23900,7 @@ var _reactRedux = __webpack_require__(14);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// Adding state and actions as props
+// Adding state and actions as props - 'todos'
 var FormField = function FormField(_ref) {
 	var labelFor = _ref.labelFor,
 	    labelValue = _ref.labelValue,
@@ -24018,6 +24024,70 @@ exports.default = Input;
 
 /***/ }),
 /* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// Same as: class TestComponent extends React.Component
+var TestComponent = function (_Component) {
+	_inherits(TestComponent, _Component);
+
+	function TestComponent(props) {
+		_classCallCheck(this, TestComponent);
+
+		var _this = _possibleConstructorReturn(this, (TestComponent.__proto__ || Object.getPrototypeOf(TestComponent)).call(this, props));
+
+		_this.state = {
+			condition: false
+		};
+		_this.handleClick = _this.handleClick.bind(_this);
+		return _this;
+	}
+
+	_createClass(TestComponent, [{
+		key: "handleClick",
+		value: function handleClick() {
+			this.setState({
+				condition: !this.state.condition
+			});
+		}
+	}, {
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"button",
+				{ className: this.state.condition ? "button toggled" : "button", onClick: this.handleClick },
+				"Click Me"
+			);
+		}
+	}]);
+
+	return TestComponent;
+}(_react.Component);
+
+exports.default = TestComponent;
+
+/***/ }),
+/* 73 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
