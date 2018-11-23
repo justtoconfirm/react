@@ -29,6 +29,7 @@ class App extends Component {
     this.state = { isOpen: false };
 
     // ES6 React.Component doesn't auto bind methods to itself. You need to bind them yourself in constructor.
+    // https://reactjs.org/docs/handling-events.html
     this.toggleModal = this.toggleModal.bind(this)
   }
 
