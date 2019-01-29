@@ -2001,7 +2001,7 @@ var ADD_ARTICLE = exports.ADD_ARTICLE = "ADD_ARTICLE";
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(23);
-module.exports = __webpack_require__(72);
+module.exports = __webpack_require__(68);
 
 
 /***/ }),
@@ -23697,34 +23697,93 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Button = __webpack_require__(67);
+var _Modal = __webpack_require__(67);
 
-var _Button2 = _interopRequireDefault(_Button);
-
-var _FormField = __webpack_require__(69);
-
-var _FormField2 = _interopRequireDefault(_FormField);
+var _Modal2 = _interopRequireDefault(_Modal);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var App = function App() {
-	return _react2.default.createElement(
-		_react2.default.Fragment,
-		null,
-		_react2.default.createElement(_FormField2.default, { labelFor: 'firstname', labelValue: 'First name', name: 'firstname' }),
-		_react2.default.createElement(_FormField2.default, { labelFor: 'lastname', labelValue: 'Last name', name: 'lastname' }),
-		_react2.default.createElement(_FormField2.default, { labelFor: 'email', labelValue: 'Email', type: 'email', placeholder: 'Email', name: 'email' }),
-		_react2.default.createElement(
-			_Button2.default,
-			{ type: 'submit', theme: 'primary' },
-			'Submit'
-		)
-	);
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+//import Button from './1-atoms/button/Button'
+
+
+var App = function (_Component) {
+	_inherits(App, _Component);
+
+	function App(props) {
+		_classCallCheck(this, App);
+
+		var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+		_this.state = {
+			showModal: false
+
+			// This binding is necessary to make 'this' work in the callback
+		};_this.showModal = _this.showModal.bind(_this);
+		_this.hideModal = _this.hideModal.bind(_this);
+		return _this;
+	}
+
+	_createClass(App, [{
+		key: 'showModal',
+		value: function showModal() {
+			this.setState({
+				showModal: true
+			});
+		}
+	}, {
+		key: 'hideModal',
+		value: function hideModal() {
+			this.setState({
+				showModal: false
+			});
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(
+					'h1',
+					null,
+					'React Modal'
+				),
+				_react2.default.createElement(
+					_Modal2.default,
+					{ show: this.state.showModal, handleClose: this.hideModal },
+					_react2.default.createElement(
+						'p',
+						null,
+						'Modal'
+					),
+					_react2.default.createElement(
+						'p',
+						null,
+						'Data'
+					)
+				),
+				_react2.default.createElement(
+					'button',
+					{ type: 'button', onClick: this.showModal },
+					'Open'
+				)
+			);
+		}
+	}]);
+
+	return App;
+}(_react.Component);
 
 exports.default = App;
 
@@ -23743,229 +23802,36 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _classnames = __webpack_require__(68);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Button = function Button(_ref) {
-	var _ref$type = _ref.type,
-	    type = _ref$type === undefined ? 'button' : _ref$type,
-	    _ref$url = _ref.url,
-	    url = _ref$url === undefined ? '' : _ref$url,
-	    _ref$className = _ref.className,
-	    className = _ref$className === undefined ? '' : _ref$className,
-	    _ref$theme = _ref.theme,
-	    theme = _ref$theme === undefined ? '' : _ref$theme,
-	    _ref$isFullWidth = _ref.isFullWidth,
-	    isFullWidth = _ref$isFullWidth === undefined ? false : _ref$isFullWidth,
-	    onClick = _ref.onClick,
+var Modal = function Modal(_ref) {
+	var handleClose = _ref.handleClose,
+	    show = _ref.show,
 	    children = _ref.children;
 
 
-	var buttonClass = (0, _classnames2.default)('btn', className, {
-		'btn--primary': theme === 'primary',
-		'btn--secondary': theme === 'secondary',
-		'btn--full-width': isFullWidth
-	});
+	var showHideClassName = show ? "modal display-block" : "modal display-none";
 
-	var isAnchorElement = url && (url.includes('http') || url.startsWith('#') || url.startsWith('mailto') || url.startsWith('/'));
-
-	var renderButton = function renderButton() {
-		return _react2.default.createElement(
-			'button',
-			{ type: type, className: buttonClass, onClick: onClick },
-			children
-		);
-	};
-
-	var renderAnchor = function renderAnchor() {
-		return _react2.default.createElement(
-			'a',
-			{ href: url, className: buttonClass, onClick: onClick },
-			children
-		);
-	};
-
-	return isAnchorElement ? renderAnchor() : renderButton();
+	return _react2.default.createElement(
+		"div",
+		{ className: showHideClassName },
+		_react2.default.createElement(
+			"section",
+			{ className: "modal-main" },
+			children,
+			_react2.default.createElement(
+				"button",
+				{ onClick: handleClose },
+				"close"
+			)
+		)
+	);
 };
 
-exports.default = Button;
+exports.default = Modal;
 
 /***/ }),
 /* 68 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-  Copyright (c) 2017 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-/* global define */
-
-(function () {
-	'use strict';
-
-	var hasOwn = {}.hasOwnProperty;
-
-	function classNames () {
-		var classes = [];
-
-		for (var i = 0; i < arguments.length; i++) {
-			var arg = arguments[i];
-			if (!arg) continue;
-
-			var argType = typeof arg;
-
-			if (argType === 'string' || argType === 'number') {
-				classes.push(arg);
-			} else if (Array.isArray(arg) && arg.length) {
-				var inner = classNames.apply(null, arg);
-				if (inner) {
-					classes.push(inner);
-				}
-			} else if (argType === 'object') {
-				for (var key in arg) {
-					if (hasOwn.call(arg, key) && arg[key]) {
-						classes.push(key);
-					}
-				}
-			}
-		}
-
-		return classes.join(' ');
-	}
-
-	if (typeof module !== 'undefined' && module.exports) {
-		classNames.default = classNames;
-		module.exports = classNames;
-	} else if (true) {
-		// register as 'classnames', consistent with npm package name
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
-			return classNames;
-		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-	} else {
-		window.classNames = classNames;
-	}
-}());
-
-
-/***/ }),
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Label = __webpack_require__(70);
-
-var _Label2 = _interopRequireDefault(_Label);
-
-var _Input = __webpack_require__(71);
-
-var _Input2 = _interopRequireDefault(_Input);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var FormField = function FormField(_ref) {
-	var labelFor = _ref.labelFor,
-	    labelValue = _ref.labelValue,
-	    name = _ref.name,
-	    _ref$type = _ref.type,
-	    type = _ref$type === undefined ? 'text' : _ref$type,
-	    placeholder = _ref.placeholder;
-
-
-	var renderLabel = function renderLabel() {
-		return _react2.default.createElement(_Label2.default, { labelFor: labelFor, labelValue: labelValue });
-	};
-
-	var renderInput = function renderInput() {
-		return _react2.default.createElement(_Input2.default, { name: name, type: type, placeholder: placeholder });
-	};
-
-	return _react2.default.createElement(
-		'div',
-		{ className: 'field-container' },
-		renderLabel(),
-		renderInput()
-	);
-};
-
-exports.default = FormField;
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Label = function Label(_ref) {
-	var labelFor = _ref.labelFor,
-	    labelValue = _ref.labelValue;
-
-	return _react2.default.createElement(
-		'label',
-		{ htmlFor: labelFor, className: 'label' },
-		labelValue
-	);
-};
-
-exports.default = Label;
-
-/***/ }),
-/* 71 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Input = function Input(_ref) {
-	var name = _ref.name,
-	    _ref$type = _ref.type,
-	    type = _ref$type === undefined ? 'text' : _ref$type,
-	    placeholder = _ref.placeholder;
-
-	return _react2.default.createElement('input', _extends({ name: name, type: type, placeholder: placeholder }, { className: 'input' }));
-};
-
-exports.default = Input;
-
-/***/ }),
-/* 72 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

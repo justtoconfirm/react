@@ -1,16 +1,45 @@
-import React from 'react'
-import Button from './1-atoms/button/Button'
-import FormField from './2-molecules/form-field/FormField'
+import React, { Component } from 'react'
+//import Button from './1-atoms/button/Button'
+import Modal from './2-molecules/modal/Modal'
 
-const App = () => {
-	return (
-		<React.Fragment>
-			<FormField labelFor='firstname' labelValue='First name' name='firstname' />
-			<FormField labelFor='lastname' labelValue='Last name' name='lastname' />
-			<FormField labelFor='email' labelValue='Email' type='email' placeholder='Email' name='email' />
-			<Button type='submit' theme='primary'>Submit</Button> 
-		</React.Fragment>
-	)
+class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			showModal: false
+		}
+
+		// This binding is necessary to make 'this' work in the callback
+		this.showModal = this.showModal.bind(this)
+		this.hideModal = this.hideModal.bind(this)
+	}
+
+	showModal() {
+		this.setState({
+			showModal: true
+		})
+	}
+
+	hideModal() {
+		this.setState({
+			showModal: false
+		})
+	}
+
+	render() {
+		return (
+			<div>
+				<h1>React Modal</h1>
+				<Modal show={this.state.showModal} handleClose={this.hideModal}>
+					<p>Modal</p>
+					<p>Data</p>
+				</Modal>
+				<button type="button" onClick={this.showModal}>
+					Open
+				</button>
+			</div>
+		);
+	}
 }
 
 export default App
