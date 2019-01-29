@@ -12,7 +12,7 @@ const Modal = ({ handleClose, show, children }) => {
 				{children}
 			</section>
 		</div>
-	);
-};
+	)
+}
 
 export default Modal
