@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './../../1-atoms/button/Button'
 
 const Modal = ({ handleClose, show, children }) => {
 
@@ -7,8 +8,8 @@ const Modal = ({ handleClose, show, children }) => {
 	return (
 		<div className={showHideClassName}>
 			<section className="modal-main">
+				<Button onClick={handleClose}>Close</Button>
 				{children}
-				<button onClick={handleClose}>close</button>
 			</section>
 		</div>
 	);

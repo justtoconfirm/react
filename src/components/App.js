@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-//import Button from './1-atoms/button/Button'
+import Button from './1-atoms/button/Button'
 import Modal from './2-molecules/modal/Modal'
 
 class App extends Component {
@@ -34,9 +34,9 @@ class App extends Component {
 					<p>Modal</p>
 					<p>Data</p>
 				</Modal>
-				<button type="button" onClick={this.showModal}>
-					Open
-				</button>
+				<Button onClick={this.showModal}>
+					Open Modal
+				</Button>
 			</div>
 		);
 	}
