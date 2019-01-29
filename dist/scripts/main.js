@@ -23760,6 +23760,7 @@ var Button = function Button(_ref) {
 	    theme = _ref$theme === undefined ? '' : _ref$theme,
 	    _ref$isFullWidth = _ref.isFullWidth,
 	    isFullWidth = _ref$isFullWidth === undefined ? false : _ref$isFullWidth,
+	    onClick = _ref.onClick,
 	    children = _ref.children;
 
 
@@ -23771,16 +23772,10 @@ var Button = function Button(_ref) {
 
 	var isAnchorElement = url && (url.includes('http') || url.startsWith('#') || url.startsWith('mailto') || url.startsWith('/'));
 
-	// Function: button click
-	function handleClick(e) {
-		e.preventDefault();
-		console.log('Button was clicked');
-	}
-
 	var renderButton = function renderButton() {
 		return _react2.default.createElement(
 			'button',
-			{ type: type, className: buttonClass, onClick: handleClick },
+			{ type: type, className: buttonClass, onClick: onClick },
 			children
 		);
 	};
@@ -23788,7 +23783,7 @@ var Button = function Button(_ref) {
 	var renderAnchor = function renderAnchor() {
 		return _react2.default.createElement(
 			'a',
-			{ href: url, className: buttonClass, onClick: handleClick },
+			{ href: url, className: buttonClass, onClick: onClick },
 			children
 		);
 	};
