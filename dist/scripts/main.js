@@ -23842,7 +23842,7 @@ var App = function (_Component) {
 				),
 				_react2.default.createElement(
 					_Button2.default,
-					{ onClick: this.showModal },
+					{ theme: 'primary', onClick: this.showModal },
 					'Open Modal'
 				)
 			);
@@ -23950,7 +23950,7 @@ var Modal = function Modal(_ref) {
 			{ className: 'modal-main' },
 			_react2.default.createElement(
 				_Button2.default,
-				{ onClick: handleClose },
+				{ theme: 'primary', onClick: handleClose },
 				'Close'
 			),
 			children

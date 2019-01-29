@@ -34,7 +34,7 @@ class App extends Component {
 					<p>Modal</p>
 					<p>Data</p>
 				</Modal>
-				<Button onClick={this.showModal}>
+				<Button theme="primary" onClick={this.showModal}>
 					Open Modal
 				</Button>
 			</div>
